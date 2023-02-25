@@ -1,8 +1,5 @@
 import { FC } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { Modal } from 'shared/ui/Modal/Modal';
-import cls from './LoginModal.module.scss';
 import { LoginForm } from '../LoginForm/LoginForm';
 
 interface LoginModalProps {
@@ -12,9 +9,8 @@ interface LoginModalProps {
 }
 
 export const LoginModal: FC<LoginModalProps> = ({ className, isOpen, onClose }) => {
-  const { t } = useTranslation();
   return (
-    <Modal lazy isOpen={isOpen} onClose={onClose} className={classNames(cls.LoginModal, {}, [className])}>
+    <Modal lazy isOpen={isOpen} onClose={onClose}>
       <LoginForm />
     </Modal>
   );

@@ -9,4 +9,5 @@ export const userSlice = createSlice({
   reducers: {}
 });
 
-export const { actions: userActions, reducer: userReducer } = userSlice;
+export const { actions: userActions } = userSlice;
+export const { reducer: userReducer } = userSlice;
