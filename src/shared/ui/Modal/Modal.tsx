@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
@@ -55,7 +55,7 @@ export const Modal: FC<ModalProps> = ({ children, isOpen, onClose, className, la
     };
   }, [isOpen, onKeyDown]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing
   };
