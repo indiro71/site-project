@@ -1,6 +1,5 @@
 import React, { FC, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
 
@@ -15,7 +14,6 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal: FC<ModalProps> = ({ children, isOpen, onClose, className, lazy }) => {
-  const { t } = useTranslation();
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();

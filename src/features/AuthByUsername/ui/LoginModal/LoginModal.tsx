@@ -4,12 +4,11 @@ import { Loader } from 'shared/ui/Loader/Loader';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
 interface LoginModalProps {
-  className?: string;
-  isOpen?: boolean;
   onClose: () => void;
+  isOpen?: boolean;
 }
 
-export const LoginModal: FC<LoginModalProps> = ({ className, isOpen, onClose }) => {
+export const LoginModal: FC<LoginModalProps> = ({ isOpen, onClose }) => {
   return (
     <Modal lazy isOpen={isOpen} onClose={onClose}>
       <Suspense fallback={<Loader />}>

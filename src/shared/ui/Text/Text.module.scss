@@ -1,6 +1,14 @@
+.Text {
+  display: block;
+}
+
 .title {
   font: var(--font-l);
   color: var(--primary-color);
+}
+
+.primary {
+  color: var(--secondary-color);
 }
 
 .text {

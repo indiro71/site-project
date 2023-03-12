@@ -4,6 +4,7 @@ import { PageError } from 'widgets/PageError';
 interface ErrorBoundaryProps {
   children: ReactNode;
 }
+
 interface ErrorBoundaryState {
   hasError: boolean;
 }
@@ -15,6 +16,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
   static getDerivedStateFromError(error: Error) {
+    console.error(error.message);
     return { hasError: true };
   }
 
